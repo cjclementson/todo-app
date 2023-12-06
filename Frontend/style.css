@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --body-color: #4B4B4B;
+    --login-area-color: #FFFFFF;
+    --sidebar-color: #404040;
+    --primary-color: #695CFE;
+    --primary-color-light: #F6F5FF;
+    --main-content-color: #c4c4c4;
+    --toggle-color: #DDD;
+    --text-color: #707070;
+
+    --tran-02: all 0.2 ease;
+    --tran-03: all 0.3 ease;
+    --tran-04: all 0.4 ease;
+    --tran-05: all 0.5 ease;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--body-color);
+    padding-top: 50px;
+    margin-bottom: 50px;
+}
+
+section {
+    padding-top: 30px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 30px;
+}
+
+.todo-list {
+    border: 2px solid var(--text-color);
+    border-radius: 1%;
+    height: 80%;
+    width: 50%;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+}
+
+#input-entry {
+    background-color: var(--text-color);
+    color: white;
+    margin-right: 5px;
+    height: auto;
+    border-radius: 5px;
+    text-indent: 2%;
+    border: none;
+    flex-grow: 2;
+}
+
+#input-entry:focus {
+    outline: auto;
+    outline-width: 0;
+    border: white solid 1px;
+}
+
+#add-button {
+    color: var(--text-color);
+    font-size: 2.5em;
+    border-radius: 5px;
+    border: var(--text-color) solid 3px;
+}
+
+.remove-item-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: var(--body-color);
+    border: none;
+    border-radius: 5px;
+    width: 18px;
+    height: 18px;
+    margin-left: 5px;
+}
+
+.remove-item-button:hover {
+    background-color: var(--text-color);
+}
+
+
+.todo-entry-checkbox {
+    accent-color: var(--text-color);
+    margin-right: 5px;
+}
+
+label {
+    flex-grow: 2;
+}
+
+ul {
+    margin-top: 5px;
+
+}
+
+li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    list-style-type: none;
+    border-top: var(--text-color) solid 1px;
+    border-bottom: var(--text-color) solid 1px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
