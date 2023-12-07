@@ -31,7 +31,7 @@ body {
     justify-content: center;
     background-color: var(--body-color);
     padding-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 50px;    
 }
 
 section {
@@ -39,11 +39,12 @@ section {
     padding-right: 20px;
     padding-left: 20px;
     padding-bottom: 30px;
+    min-height: 80vh;   
 }
 
 .todo-list {
     border: 2px solid var(--text-color);
-    border-radius: 1%;
+    border-radius: 5%;
     height: 80%;
     width: 50%;
 }
@@ -51,10 +52,16 @@ section {
 form {
     display: flex;
     flex-direction: row;
+    border: var(--text-color) solid 2px;
+    border-radius: 5px;
+}
+
+form:focus-within {
+    border: white 2px solid;
 }
 
 #input-entry {
-    background-color: var(--text-color);
+    background-color: var(--body-color);
     color: white;
     margin-right: 5px;
     height: auto;
@@ -62,12 +69,13 @@ form {
     text-indent: 2%;
     border: none;
     flex-grow: 2;
+    min-width: 10px;
 }
 
 #input-entry:focus {
     outline: auto;
     outline-width: 0;
-    border: white solid 1px;
+    border: none;
 }
 
 #add-button {
@@ -121,4 +129,27 @@ li {
     border-bottom: var(--text-color) solid 1px;
     padding-left: 5px;
     padding-right: 5px;
+}
+
+#add-button-image {
+    fill: var(--text-color);
+    width: 100%;
+    height: 100%;
+
+}
+
+#add-button-container {
+    background-color: var(--body-color);
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+}
+
+#add-button-container:focus-visible {
+    outline: white 1px solid;
+}
+
+input[type=checkbox]:focus-visible {
+    outline: white 1px solid;
 }
