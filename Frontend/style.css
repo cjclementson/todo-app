@@ -15,7 +15,6 @@
 
 h1 {
     color: var(--secondary-color);
-    margin-bottom: 5px;
 }
 
 body {
@@ -25,21 +24,17 @@ body {
     justify-content: center;
     background-color: var(--body-color);
     padding-top: 10px;
-    margin-bottom: 50px;    
+    margin: 5px 0 50px 0;   
 }
 
 section {
-    padding-top: 30px;
-    padding-right: 20px;
-    padding-left: 20px;
-    padding-bottom: 30px;
+    padding: 30px 20px 30px 20px;
     min-height: 80vh;   
 }
 
 .todo-list {
     border: 2px solid var(--primary-color);
     border-radius: 5%;
-    height: 80%;
     width: 50%;
 }
 
@@ -54,11 +49,10 @@ form:focus-within {
     border: var(--secondary-color) 2px solid;
 }
 
-#input-entry {
+#todo-input {
     background-color: var(--body-color);
     color: var(--secondary-color);
     margin-right: 5px;
-    height: auto;
     border-radius: 5px;
     text-indent: 2%;
     border: none;
@@ -66,50 +60,37 @@ form:focus-within {
     min-width: 10px;
 }
 
-#input-entry:focus {
+#todo-input:focus {
     outline: auto;
     outline-width: 0;
     border: none;
 }
 
 #add-button {
-    color: var(--primary-color);
-    font-size: 2.5em;
-    border-radius: 5px;
-    border: var(--primary-color) solid 3px;
-}
-
-.remove-item-button {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    color: var(--secondary-color);
     background-color: var(--body-color);
+    width: 40px;
+    height: 40px;
     border: none;
     border-radius: 5px;
-    width: 18px;
-    height: 18px;
-    margin-left: 5px;
 }
 
-.remove-item-button:hover {
-    background-color: var(--primary-color);
+#add-button:focus-visible {
+    outline: var(--secondary-color) 1px solid;
 }
 
+#add-button-image {
+    fill: var(--primary-color);
+    width: 100%;
+    height: 100%;
 
-.todo-entry-checkbox {
-    accent-color: var(--primary-color);
-    margin-right: 5px;
 }
 
-label {
-    flex-grow: 2;
+#add-button-image:hover {
+    fill: var(--secondary-color);
 }
 
 ul {
     margin-top: 5px;
-
 }
 
 li {
@@ -125,33 +106,36 @@ li {
     padding-right: 5px;
 }
 
-#add-button-image {
-    fill: var(--primary-color);
-    width: 100%;
-    height: 100%;
-
-}
-
-#add-button-image:hover {
-    fill: var(--secondary-color);
-}
-
-#add-button-container {
-    background-color: var(--body-color);
-    width: 40px;
-    height: 40px;
-    border: none;
-    border-radius: 5px;
-}
-
-#add-button-container:focus-visible {
-    outline: var(--secondary-color) 1px solid;
+.todo-item-checkbox {
+    accent-color: var(--primary-color);
+    margin-right: 5px;
 }
 
 input[type=checkbox]:focus-visible {
     outline: var(--secondary-color) 1px solid;
 }
 
-.completed {
+label {
+    flex-grow: 2;
+}
+
+.todo-item-label-completed {
     text-decoration: line-through;
-  }
+}
+
+.remove-item-button:hover {
+    background-color: var(--primary-color);
+}
+
+.remove-item-button {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary-color);
+    background-color: var(--body-color);
+    border: none;
+    border-radius: 5px;
+    width: 18px;
+    height: 18px;
+    margin-left: 5px;
+}
