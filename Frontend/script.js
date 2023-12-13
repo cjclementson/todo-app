@@ -1,7 +1,14 @@
 var idCounter = 0;
 
-function addButtonClicked() {
+function addButtonClicked(event) {
+    event.preventDefault();
+
     let text = document.querySelector("#todo-input").value;
+
+    if (isEmptyInput(text)) {
+        return;
+    }
+
     let ul = document.querySelector("ul");
 
     li = createListItem(text);
@@ -98,4 +105,21 @@ function createRemoveButton(li) {
 function updateIdCounter() {
 
     idCounter++;
+}
+
+function isEmptyInput(input) {
+
+    if (input.trim() === "") {
+
+        let invalidInputElement = document.querySelector("#invalid-input");
+        invalidInputElement.style.display = 'block';
+        return true;
+        
+    }
+    else {
+
+        let invalidInputElement = document.querySelector("#invalid-input");
+        invalidInputElement.style.display = 'none';
+        return false;
+    }
 }

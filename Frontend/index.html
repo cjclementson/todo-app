@@ -13,15 +13,16 @@
 </header>
 <body>
     <section class="todo-list">
-        <form>
-            <input type="text" id="todo-input"></input>
-            <button type="button" onclick="addButtonClicked()" id="add-button">
+        <form onsubmit="addButtonClicked(event);">
+            <input type="text" keypress="addButtonClicked()" id="todo-input"></input>            
+            <button type="button" onclick="addButtonClicked(event)" id="add-button">
                 <svg id="add-button-image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
                     <path d="M5 21h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2zm2-10h4V7h2v4h4v2h-4v4h-2v-4H7v-2z">
                     </path>
                 </svg>
             </button>
         </form>
+        <label id="invalid-input" class="invalid-input" for="todo-input">Please enter a value.</label>
         <ul>
         </ul>
     </section>    

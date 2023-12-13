@@ -49,6 +49,12 @@ form:focus-within {
     border: var(--secondary-color) 2px solid;
 }
 
+.invalid-input {
+    font-size: 1em;
+    color: var(--secondary-color);
+    display: none;
+}
+
 #todo-input {
     background-color: var(--body-color);
     color: var(--secondary-color);
