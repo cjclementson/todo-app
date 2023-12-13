@@ -25,17 +25,19 @@ body {
     background-color: var(--body-color);
     padding-top: 10px;
     margin: 5px 0 50px 0;   
+    min-width: 300px;
 }
 
 section {
     padding: 30px 20px 30px 20px;
-    min-height: 80vh;   
+    min-height: 80dvh;   
 }
 
 .todo-list {
     border: 2px solid var(--primary-color);
     border-radius: 5%;
-    width: 50%;
+    width: min(70%, 700px);
+    
 }
 
 form {
@@ -86,9 +88,7 @@ form:focus-within {
 
 #add-button-image {
     fill: var(--primary-color);
-    width: 100%;
     height: 100%;
-
 }
 
 #add-button-image:hover {
