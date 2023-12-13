@@ -8,6 +8,8 @@ function addButtonClicked() {
     ul.appendChild(li);
 
     document.querySelector("#todo-input").value = "";
+
+    updateIdCounter();
 }
 
 function removeButtonClicked(element) {
